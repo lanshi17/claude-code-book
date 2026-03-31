@@ -1,7 +1,7 @@
-<h1 align="center">驾驭智能体</h1>
+<h1 align="center">解码 Agent Harness</h1>
 
 <p align="center">
-  <strong>Claude Code 设计哲学与 Agent Harness 实战</strong>
+  <strong>Claude Code 架构深度剖析</strong>
 </p>
 
 <p align="center">
@@ -18,6 +18,20 @@
 <p align="center">
   <em>从零到精通，深入理解 AI 编程助手的核心架构与最佳实践</em>
 </p>
+
+---
+
+## 背景
+
+2026 年 3 月 31 日，安全研究员 [Chaofan Shou (@Fried_rice)](https://x.com/Fried_rice) 发现 Anthropic 发布在 npm registry 中的 `@anthropic-ai/claude-code` 包存在构建配置失误：source map 文件引用了未设访问控制的 Cloudflare R2 存储桶。披露推文获得超 1700 万次浏览，引发了技术社区对 Agent 架构的空前讨论。Anthropic 随后修补了该配置。
+
+本书写作的初衷正是受到这场讨论的启发——当 Agent 架构成为开发者社区的热门话题，我们意识到需要一本系统性的书来讲解 Agent Harness 的设计原理。
+
+> **⚠️ 免责声明 / Disclaimer**
+>
+> 本书基于对 Claude Code 公开文档和产品行为的架构分析编写，**未引用、未使用任何未公开或未授权的源码**。Claude Code 为 Anthropic PBC 产品，本书不隶属于、未获授权于、也不代表 Anthropic。
+>
+> This book is based on analysis of Claude Code's public documentation and product behavior. No unpublished or unauthorized source code is referenced or used.
 
 ---
 
@@ -41,20 +55,6 @@
 | 不满足于调 API 的**高级工程师** | 工具调用、流式处理、权限管控的底层机制 |
 | 对 Agent 工程感兴趣的**研究者** | 从实现角度理解 Agent 系统的运作方式 |
 | 希望最大化利用 Claude Code 的**实践者** | 理解设计意图，用得更准、调得更深 |
-
-## 背景
-
-2026 年 3 月 31 日，安全研究员 [Chaofan Shou (@Fried_rice)](https://x.com/Fried_rice) 发现 Anthropic 发布在 npm registry 中的 `@anthropic-ai/claude-code` 包存在构建配置失误：source map 文件引用了未设访问控制的 Cloudflare R2 存储桶。披露推文获得超 1700 万次浏览，引发了技术社区对 Agent 架构的广泛讨论。Anthropic 随后修补了该配置。
-
-本书写作的初衷正是受到这场讨论的启发——当 Agent 架构成为开发者社区的热门话题，我们意识到需要一本系统性的书来讲解 Agent Harness 的设计原理。
-
-> **⚠️ 免责声明 / Disclaimer**
->
-> 本书基于对 Claude Code 公开文档和产品行为的架构分析编写，**未引用、未使用任何未公开或未授权的源码**。Claude Code 为 Anthropic PBC 产品，本书不隶属于、未获授权于、也不代表 Anthropic。
->
-> This book is based on analysis of Claude Code's public documentation and product behavior. No unpublished or unauthorized source code is referenced or used.
-
----
 
 ## 目录
 
@@ -139,5 +139,3 @@
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="CC BY-NC-SA 4.0" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a>
 
 本书内容采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 协议发布——可自由分享和改编，但须署名、非商业使用、并以相同协议共享。
-
-Claude Code 为 Anthropic PBC 产品，本书的分析基于公开资料，未引用任何未授权源码。
